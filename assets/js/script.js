@@ -1,10 +1,14 @@
-
 function addTodo() {
   if (todo.value === "") {
     alert("Digite um valor para a Task!");
   } else {
-    console.log(todoList.innerHTML)
-    todoList.innerHTML = todoList.innerHTML + `<input type="checkbox" class="item" > ${todo.value} </input><br>`;
+    todoList.innerHTML = `${todoList.innerHTML} 
+      <div class="todoItem">
+        <input type="checkbox" id="${todo.value}">
+        <label for="${todo.value}">${todo.value}</label>
+        <br>
+      </div>
+    `;
     todo.value = "";
   }
 }
